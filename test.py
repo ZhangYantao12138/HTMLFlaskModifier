@@ -1,3 +1,4 @@
+# 用于生成图形界面
 import re
 import os
 import tkinter as tk
@@ -41,7 +42,7 @@ def modify_html_file(input_file, output_folder):
 
 # 定义一个函数来处理文件选择和转换
 def process_files():
-    files = filedialog.askopenfilenames(title="Select HTML files", filetypes=[("HTML files", "*.html")])
+    files = filedialog.askopenfilenames(title="选择HTML文件", filetypes=[("HTML files", "*.html")])
     if not files:
         return
     
@@ -68,7 +69,7 @@ root.title("HTML Modifier")
 root.geometry("300x150")
 
 # 创建按钮
-btn_select_files = tk.Button(root, text="Select HTML Files", command=process_files)
+btn_select_files = tk.Button(root, text="选择HTML文件", command=process_files)
 btn_select_files.pack(pady=20)
 
 # 运行主循环
